@@ -12,15 +12,15 @@
       "authenticationType": "none"
     },
     {
-      "source": "^/(username)$",
+      "source": "^/jmodule1(.*)$",
       "target": "$1",
       "destination": "jmodule1",
       "scope": "$XSAPPNAME.Display",
       "authenticationType": "xsuaa"
     },
     {
-      "source": "^/(pymodule1)$",
-      "target": "/",
+      "source": "^/pymodule1(.*)$",
+      "target": "$1",
       "destination": "pymodule1",
       "authenticationType": "none"
     }
