@@ -1,0 +1,28 @@
+{
+  "welcomeFile": "index.html",
+  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "^/(index.html)$",
+      "target": "$1",
+      "localDir": ".",
+      "authenticationType": "none"
+    },
+    {
+      "source": "^/(username)$",
+      "target": "$1",
+      "destination": "jmodule1",
+      "scope": "$XSAPPNAME.Display",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/(pymodule1)$",
+      "target": "/",
+      "destination": "pymodule1",
+      "authenticationType": "none"
+    }
+  ]
+}
