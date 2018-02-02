@@ -10,7 +10,7 @@ port = int(os.getenv("PORT", 9099))
 
 @app.route('/')
 def hello_world():
-    return 'Hello world. This is python module pymodule1.'
+    return '<html><body> <h1>Hello World!</h1> <p>This is python module pymodule1.</p> </body></html>'
 
 if __name__ == '__main__':
     # Run the app, listening on all IPs with our chosen port number
