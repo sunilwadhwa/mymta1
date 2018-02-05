@@ -3,6 +3,7 @@
 **/target
 /.mta/
 .pydevproject
-/.project
-/.settings/
+**/.project
+**/.settings/
+**/.classpath
 /.externalToolBuilders/
