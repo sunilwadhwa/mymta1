@@ -1,5 +1,11 @@
 {
     "name": "approuter",
+    "description": "Application Router",
+    "license": "BSD-3-Clause",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sunilwadhwa/mymta1.git"
+    },
     "dependencies": {
         "@sap/approuter": "2.7.1"
     },
