@@ -1,6 +1,7 @@
 package com.sap.ateam.jdemo1;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.ServletSecurity;
 import javax.servlet.annotation.WebServlet;
@@ -8,6 +9,9 @@ import javax.servlet.annotation.HttpConstraint;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Servlet implementation class Jdemo1Servlet
@@ -28,8 +32,7 @@ public class Jdemo1Servlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Served at URI: ").append(request.getRequestURI()).println();
-		// response.getWriter().append("PathInfo: " + request.getPathInfo()).println();
+		logger.info("Served at URI: {}", request.getRequestURI());
 		
 		if (request.getUserPrincipal() != null) {
 			response.getWriter().append("Application User: " + request.getUserPrincipal().getName()).println();
@@ -48,4 +51,5 @@ public class Jdemo1Servlet extends HttpServlet {
 		doGet(request, response);
 	}
 
+	private Logger logger = LoggerFactory.getLogger(Jdemo1Servlet.class);
 }
